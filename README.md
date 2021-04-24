@@ -6,7 +6,7 @@ the script `certbot-dns-godaddy.sh` should be used with option `--manual-auth-ho
 the script `certbot-dns-godaddy-clean.sh` should be used with option `--manual-cleanup-hook`
 
 ### Example
-`certbot certonly --manual --manual-auth-hook certbot-dns-godaddy.sh --manual-cleanup-hook certonly-dns-godaddy-clean.sh -d example.com`
+`certbot certonly --manual --preferred-challenges dns --manual-auth-hook certbot-dns-godaddy.sh --manual-cleanup-hook certonly-dns-godaddy-clean.sh -d example.com`
 
 ## Environment variables
 `GODADDY_KEY`: godaddy user api key    
@@ -22,5 +22,5 @@ for example:
 
 domain like this:
 - `*.example.com`
-- `www.example.com`
+- `www.example.com`    
 will make the script behave wrongly
